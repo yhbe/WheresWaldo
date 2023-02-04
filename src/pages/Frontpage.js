@@ -35,6 +35,7 @@ function Frontpage(props) {
       ];
       const [targetX,targetY] = [target[0], target[1]]
       if (targetX + 25 > waldoX && targetX -25 < waldoX && targetY + 50 > waldoY && targetY - 50 < waldoY){
+        document.querySelector(".waldofound").style.display = "flex"
         setSearchList(prevstate => {
           let arr = [...prevstate]
           arr = arr.filter(character => character !== name)
@@ -53,6 +54,7 @@ function Frontpage(props) {
         targetY + 25 > wizardY &&
         targetY - 25 < wizardY
       ) {
+        document.querySelector(".wizardfound").style.display = "flex";
           setSearchList((prevstate) => {
             let arr = [...prevstate];
             arr = arr.filter((character) => character !== name);
@@ -71,6 +73,7 @@ function Frontpage(props) {
         targetY + 25 > odlawY &&
         targetY - 25 < odlawY
       ) {
+        document.querySelector(".odlawfound").style.display = "flex";
          setSearchList((prevstate) => {
            let arr = [...prevstate];
            arr = arr.filter((character) => character !== name);
@@ -87,9 +90,7 @@ function Frontpage(props) {
   return (
     <div className="main--container">
       <h1>Where's:</h1>
-      <ul>
-        {namesList}
-      </ul>
+      <ul>{namesList}</ul>
       <div className="image--container">
         <div className="cursortargetcontainer">
           <div className="cursortarget"></div>
@@ -97,6 +98,9 @@ function Frontpage(props) {
           <button onClick={(event) => getEvent(event)}>Odlaw</button>
           <button onClick={(event) => getEvent(event)}>Wizard</button>
         </div>
+        <div className="waldofound"></div>
+        <div className="wizardfound"></div>
+        <div className="odlawfound"></div>
         <img
           onClick={(event) => getEvent(event)}
           src={image}
