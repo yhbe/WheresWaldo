@@ -7,7 +7,11 @@ function Frontpage(props) {
   const [searchList, setSearchList] = React.useState([
     "Waldo","Odlaw","Wizard"
   ])
-  console.log(searchList)
+
+  if (searchList.length === 0){
+    const delta = Date.now() - props.time; 
+    let score = delta / 1000;
+  } 
 
   let currentMouseClick 
 
