@@ -88,3 +88,61 @@ img {
   border: 5px solid rgb(0, 0, 0);
   background-color: rgba(127, 255, 144, 0.432);
 }
+
+.modal{
+  display: flex;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.466);
+  width: 100vw;
+  height: 120vh;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.score--modal--inner{
+  padding: 40px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.score--modal--inner > * {
+  margin: 4px 0px;
+}
+
+.score--modal--inner > h4{
+  margin: 0;
+}
+
+.score--modal--button-container{
+  display: flex;
+  justify-content: end;
+}
+
+.cancel--button{
+  border: none;
+  color: rgb(194, 158, 41);
+  height: 50px;
+  width: 100px;
+  font-weight: bolder;
+  background-color: white;
+}
+
+.submit--button{
+  border: none;
+  background-color: rgb(194, 158, 41);
+  color: white;
+  font-weight: bolder;
+  height: 50px;
+  width: 100px;
+  border-radius: 7px;
+}
+
+.leaderboard-modal-inner{
+  text-align: center;
+  border-radius: 15px;
+  width: 800px;
+  height: 500px;
+  margin-top: -200px;
+  background-color: white;
+}

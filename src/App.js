@@ -4,6 +4,7 @@ import Frontpage from './pages/Frontpage';
 import { db } from './firebase/firebase-config';
 import {collection, getDocs} from "firebase/firestore"
 
+
 function App() {
   const [locations,setLocations] = React.useState([])
   const usersCollectionRef = collection(db, "location")
@@ -24,7 +25,6 @@ function App() {
   return (
     <div className="App">
       {!wonGame && <Frontpage locations={locations} setTime={setTime} time={time} setWonGame={setWonGame}/>}
-      {wonGame && <h1>{time}</h1>}
     </div>
   );
 }

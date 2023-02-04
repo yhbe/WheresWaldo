@@ -1,19 +1,22 @@
 import React from 'react'
 import image from "../waldoimage.jpg";
+import YourScoreModal from './YourScoreModal';
+import LeaderBoards from './LeaderBoards';
 
 
 function Frontpage(props) {
-  // const [won,setWon] = React.useState(false)
   const [searchList, setSearchList] = React.useState([
     "Waldo","Odlaw","Wizard"
   ])
+  const [showScore, setShowScore] = React.useState(false)
+  const [showLeaderBoard, setShowLeaderBoard] = React.useState(false)
 
   React.useEffect(() => {
     if (searchList.length === 0){
       const delta = Date.now() - props.time;
       let time = delta / 1000;
       props.setTime(time);
-      props.setWonGame(true);
+      setShowScore(true)
     }
   }, [searchList])
 
@@ -116,6 +119,14 @@ function Frontpage(props) {
           alt="where's waldo"
         ></img>
       </div>
+      {showLeaderBoard && <LeaderBoards />}
+      {showScore && (
+        <YourScoreModal
+          setShowLeaderBoard={setShowLeaderBoard}
+          time={props.time}
+          setShowScore={setShowScore}
+        />
+      )}
     </div>
   );
 }
