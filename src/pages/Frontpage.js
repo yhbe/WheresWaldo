@@ -8,10 +8,15 @@ function Frontpage(props) {
     "Waldo","Odlaw","Wizard"
   ])
 
-  if (searchList.length === 0){
-    const delta = Date.now() - props.time; 
-    let score = delta / 1000;
-  } 
+  React.useEffect(() => {
+    if (searchList.length === 0){
+      const delta = Date.now() - props.time;
+      let time = delta / 1000;
+      props.setTime(time);
+      props.setWonGame(true);
+    }
+  }, [searchList])
+
 
   let currentMouseClick 
 
@@ -88,7 +93,7 @@ function Frontpage(props) {
   }
 
   let namesList = searchList.map(name => {
-    return  <li>{name}</li>
+    return  <li key={name}>{name}</li>
   })
   
   return (

@@ -7,7 +7,7 @@ import {collection, getDocs} from "firebase/firestore"
 function App() {
   const [locations,setLocations] = React.useState([])
   const usersCollectionRef = collection(db, "location")
-
+  const [wonGame, setWonGame] = React.useState(false)
   const [time, setTime] = React.useState([])
   
   React.useEffect(() => {
@@ -23,7 +23,8 @@ function App() {
 
   return (
     <div className="App">
-      <Frontpage locations={locations} time={time}/>
+      {!wonGame && <Frontpage locations={locations} setTime={setTime} time={time} setWonGame={setWonGame}/>}
+      {wonGame && <h1>{time}</h1>}
     </div>
   );
 }
