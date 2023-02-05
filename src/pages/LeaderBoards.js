@@ -9,12 +9,10 @@ function LeaderBoards(props) {
    React.useEffect(() => {
      const getLeaderBoard = async () => {
        const data = await getDocs(usersCollectionRef);
-       console.log(data, "NAMES");
        setLeaderBoard(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
      };
      getLeaderBoard();
    }, []);
-   console.log(leaderboard, "<===")
 
    let leaderboardList = leaderboard.sort((personA, personB) => {
      return personA.time - personB.time
