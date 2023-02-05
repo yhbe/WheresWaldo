@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/WheresWaldo/static/css/main.55640dc4.css",
+    "main.js": "/WheresWaldo/static/js/main.12f0c6b2.js",
+    "static/media/waldoimage.jpg": "/WheresWaldo/static/media/waldoimage.23511fb7a49a2d1df73f.jpg",
+    "index.html": "/WheresWaldo/index.html",
+    "main.55640dc4.css.map": "/WheresWaldo/static/css/main.55640dc4.css.map",
+    "main.12f0c6b2.js.map": "/WheresWaldo/static/js/main.12f0c6b2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.55640dc4.css",
+    "static/js/main.12f0c6b2.js"
+  ]
+}
