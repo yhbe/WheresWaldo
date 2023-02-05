@@ -12,6 +12,6 @@ Firebase
 # Features:
 Use of firebase-firestore for a live back end database
 
-# Results
+# Results:
 
 ![whereswaldo](https://user-images.githubusercontent.com/101876022/216798388-6fb59765-8549-4005-930b-3933568770b7.png)
