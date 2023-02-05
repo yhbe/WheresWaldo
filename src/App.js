@@ -14,7 +14,6 @@ function App() {
   React.useEffect(() => {
     const getLocations = async () => {
       const data = await getDocs(usersCollectionRef)
-      console.log(data, "DATA")
       setLocations(data.docs.map(doc => ({...doc.data(), id: doc.id})))
     }
     getLocations()

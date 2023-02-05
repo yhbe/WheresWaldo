@@ -45,8 +45,12 @@ img {
 
 .cursortargetcontainer:active{
   box-shadow: 1px 1px 50px black;
+  background-color: rgba(255, 0, 0, 0.589);
   border-radius: 25%;
-  transition: .2s;
+}
+
+.cursortargetcontainer > button:active {
+  background-color: greenyellow;
 }
 
 .cursortarget{
@@ -116,7 +120,7 @@ img {
 
 .score--modal--button-container{
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .cancel--button{
@@ -139,10 +143,22 @@ img {
 }
 
 .leaderboard-modal-inner{
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
   border-radius: 15px;
   width: 800px;
   height: 500px;
   margin-top: -200px;
   background-color: white;
+  overflow: scroll;
+  align-items: center;
+}
+
+.leaderboard--content{
+  display: flex;
+  margin: auto;
+  width: 500px;
+  align-items: center;
+  justify-content: space-between;
 }
